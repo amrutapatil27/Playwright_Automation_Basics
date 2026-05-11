@@ -1,0 +1,3 @@
+Initial Balance captured: 50000
+Expected Balance should be: 45000
+Actual Balance in UI after transfer: 50000

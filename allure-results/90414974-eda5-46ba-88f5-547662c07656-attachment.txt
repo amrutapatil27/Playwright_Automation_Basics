@@ -1,0 +1,2 @@
+Initial Balance captured: 50000
+Expected Balance should be: 45000

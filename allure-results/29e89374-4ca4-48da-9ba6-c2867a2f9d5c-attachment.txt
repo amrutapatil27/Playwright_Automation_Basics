@@ -1,0 +1,5 @@
+Initial Balance captured: 50000
+Expected Balance should be: 45000
+New amount is: $45,000.00
+New balance is: 50000
+Actual Balance in UI after transfer: 50000
