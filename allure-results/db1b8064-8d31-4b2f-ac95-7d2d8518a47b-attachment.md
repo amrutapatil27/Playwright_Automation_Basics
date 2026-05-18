@@ -1,0 +1,863 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: BASICS\LOCATORS\DropDown_From_Practice_Page.spec.ts >> Select options from Drop Down Box
+- Location: tests\BASICS\LOCATORS\DropDown_From_Practice_Page.spec.ts:4:5
+
+# Error details
+
+```
+TypeError: c is not iterable
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - complementary "Practice navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - link "T The Testing Academy" [ref=e5] [cursor=pointer]:
+        - /url: ./index.html
+        - generic [ref=e6]: T
+        - strong [ref=e8]: The Testing Academy
+      - button "Toggle sidebar" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+    - generic [ref=e13]:
+      - img [ref=e14]
+      - searchbox / [ref=e17]
+      - generic [ref=e18]: /
+    - navigation [ref=e19]:
+      - generic [ref=e20]:
+        - paragraph [ref=e21]:
+          - img [ref=e22]
+          - generic [ref=e24]: Get started
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - link "Overview" [ref=e27] [cursor=pointer]:
+              - /url: ./index.html
+              - img [ref=e29]
+              - generic [ref=e32]: Overview
+      - generic [ref=e33]:
+        - paragraph [ref=e34]:
+          - img [ref=e35]
+          - generic [ref=e37]: Selectors & Locators
+        - list [ref=e38]:
+          - listitem [ref=e39]:
+            - link "Multiple Element Filter" [ref=e40] [cursor=pointer]:
+              - /url: ./multiple_element_filter.html
+              - img [ref=e42]
+              - generic [ref=e45]: Multiple Element Filter
+          - listitem [ref=e46]:
+            - link "Web Table Directory" [ref=e47] [cursor=pointer]:
+              - /url: ./webtable.html
+              - img [ref=e49]
+              - generic [ref=e54]: Web Table Directory
+      - generic [ref=e55]:
+        - paragraph [ref=e56]:
+          - img [ref=e57]
+          - generic [ref=e60]: Tables & Forms
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - link "QA Profile Form" [ref=e63] [cursor=pointer]:
+              - /url: ./tables/practice.html
+              - img [ref=e65]
+              - generic [ref=e68]: QA Profile Form
+          - listitem [ref=e69]:
+            - link "Companies Table" [ref=e70] [cursor=pointer]:
+              - /url: ./tables/webtable.html
+              - img [ref=e72]
+              - generic [ref=e75]: Companies Table
+          - listitem [ref=e76]:
+            - link "Tall Buildings Table" [ref=e77] [cursor=pointer]:
+              - /url: ./tables/webtable1.html
+              - img [ref=e79]
+              - generic [ref=e81]: Tall Buildings Table
+          - listitem [ref=e82]:
+            - link "Custom Dropdowns" [ref=e83] [cursor=pointer]:
+              - /url: ./tables/dropdowns.html
+              - img [ref=e85]
+              - generic [ref=e88]: Custom Dropdowns
+          - listitem [ref=e89]:
+            - link "Select Box Variants" [ref=e90] [cursor=pointer]:
+              - /url: ./tables/select-boxes.html
+              - img [ref=e92]
+              - generic [ref=e95]: Select Box Variants
+          - listitem [ref=e96]:
+            - link "Sortable Admin Table" [ref=e97] [cursor=pointer]:
+              - /url: ./tables/sortable.html
+              - generic [ref=e99]: Sortable Admin Table
+          - listitem [ref=e100]:
+            - link "Cricket Scorecard" [ref=e101] [cursor=pointer]:
+              - /url: ./tables/scorecard.html
+              - generic [ref=e103]: Cricket Scorecard
+      - generic [ref=e104]:
+        - paragraph [ref=e105]:
+          - img [ref=e106]
+          - generic [ref=e111]: Frames
+        - list [ref=e112]:
+          - listitem [ref=e113]:
+            - link "Frames overview" [ref=e114] [cursor=pointer]:
+              - /url: ./frames/index.html
+              - img [ref=e116]
+              - generic [ref=e118]: Frames overview
+          - listitem [ref=e119]:
+            - link "Multi-frame frameset" [ref=e120] [cursor=pointer]:
+              - /url: ./frames/multi-frames.html
+              - img [ref=e122]
+              - generic [ref=e127]: Multi-frame frameset
+          - listitem [ref=e128]:
+            - link "Nested iframes" [ref=e129] [cursor=pointer]:
+              - /url: ./frames/nested-iframes.html
+              - img [ref=e131]
+              - generic [ref=e135]: Nested iframes
+          - listitem [ref=e136]:
+            - link "Courses frameset" [ref=e137] [cursor=pointer]:
+              - /url: ./frames/courses-frameset.html
+              - generic [ref=e139]: Courses frameset
+      - generic [ref=e140]:
+        - paragraph [ref=e141]:
+          - img [ref=e142]
+          - generic [ref=e145]: Widgets
+        - list [ref=e146]:
+          - listitem [ref=e147]:
+            - link "SVG locators" [ref=e148] [cursor=pointer]:
+              - /url: ./widgets/svg.html
+              - generic [ref=e150]: SVG locators
+          - listitem [ref=e151]:
+            - link "Shadow DOM" [ref=e152] [cursor=pointer]:
+              - /url: ./widgets/shadow-dom.html
+              - generic [ref=e154]: Shadow DOM
+          - listitem [ref=e155]:
+            - link "Calendar / date picker" [ref=e156] [cursor=pointer]:
+              - /url: ./widgets/calendar.html
+              - generic [ref=e158]: Calendar / date picker
+          - listitem [ref=e159]:
+            - link "Drag & drop Kanban" [ref=e160] [cursor=pointer]:
+              - /url: ./widgets/dnd.html
+              - generic [ref=e162]: Drag & drop Kanban
+          - listitem [ref=e163]:
+            - link "Toasts & notifications" [ref=e164] [cursor=pointer]:
+              - /url: ./widgets/toasts.html
+              - generic [ref=e166]: Toasts & notifications
+          - listitem [ref=e167]:
+            - link "Native dialogs" [ref=e168] [cursor=pointer]:
+              - /url: ./widgets/dialogs.html
+              - generic [ref=e170]: Native dialogs
+          - listitem [ref=e171]:
+            - link "Hover menus" [ref=e172] [cursor=pointer]:
+              - /url: ./widgets/hover-menu.html
+              - generic [ref=e174]: Hover menus
+          - listitem [ref=e175]:
+            - link "Right-click menu" [ref=e176] [cursor=pointer]:
+              - /url: ./widgets/context-menu.html
+              - generic [ref=e178]: Right-click menu
+          - listitem [ref=e179]:
+            - link "Keyboard navigation" [ref=e180] [cursor=pointer]:
+              - /url: ./widgets/keyboard-form.html
+              - generic [ref=e182]: Keyboard navigation
+      - generic [ref=e183]:
+        - paragraph [ref=e184]:
+          - img [ref=e185]
+          - generic [ref=e188]: Network
+        - list [ref=e189]:
+          - listitem [ref=e190]:
+            - link "Network interception" [ref=e191] [cursor=pointer]:
+              - /url: ./network/intercept.html
+              - generic [ref=e193]: Network interception
+      - generic [ref=e194]:
+        - paragraph [ref=e195]:
+          - img [ref=e196]
+          - generic [ref=e198]: Coming next
+        - list [ref=e199]:
+          - listitem [ref=e200]:
+            - link "Alerts & Modals Soon":
+              - /url: "#"
+              - generic:
+                - img
+              - generic: Alerts & Modals
+              - generic: Soon
+          - listitem [ref=e201]:
+            - link "Windows & Tabs Soon":
+              - /url: "#"
+              - generic:
+                - img
+              - generic: Windows & Tabs
+              - generic: Soon
+          - listitem [ref=e202]:
+            - link "Upload & Download Soon":
+              - /url: "#"
+              - generic:
+                - img
+              - generic: Upload & Download
+              - generic: Soon
+    - generic [ref=e203]:
+      - generic [ref=e204]: © The Testing Academy · 2026
+      - button "Toggle dark mode" [ref=e205] [cursor=pointer]:
+        - img [ref=e206]
+  - generic [ref=e208]:
+    - banner [ref=e209]:
+      - button "Open sidebar" [ref=e210] [cursor=pointer]:
+        - img [ref=e211]
+      - generic [ref=e213]:
+        - generic [ref=e214]: Practice
+        - img [ref=e215]
+        - strong [ref=e217]: Overview
+      - generic [ref=e218]:
+        - generic [ref=e219]: Local build
+        - button "Toggle dark mode" [ref=e220] [cursor=pointer]:
+          - img [ref=e221]
+          - img [ref=e223]
+    - main [ref=e226]:
+      - region "Playwright practice dashboard." [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]: The Testing Academy
+          - heading "Playwright practice dashboard." [level=1] [ref=e231]
+          - paragraph [ref=e232]: A focused index of student practice pages for selectors, tables, forms, custom dropdowns, comboboxes, and frame handling. Use the sidebar to jump by topic, or search from the left navigation.
+          - generic [ref=e233]:
+            - link "Start selectors" [ref=e234] [cursor=pointer]:
+              - /url: ./multiple_element_filter.html
+              - text: Start selectors
+              - img [ref=e235]
+            - link "Open web table" [ref=e237] [cursor=pointer]:
+              - /url: ./webtable.html
+        - generic [ref=e238]:
+          - generic [ref=e239]:
+            - strong [ref=e240]: "23"
+            - generic [ref=e241]: Practice pages
+          - generic [ref=e242]:
+            - strong [ref=e243]: "2"
+            - generic [ref=e244]: Coming next
+          - generic [ref=e245]:
+            - strong [ref=e246]:
+              - emphasis [ref=e247]: "00"
+              - text: :00
+            - generic [ref=e248]: Setup time
+          - generic [ref=e249]:
+            - strong [ref=e250]: Local
+            - generic [ref=e251]: Review build
+      - generic [ref=e252]:
+        - heading "Course curriculum" [level=2] [ref=e253]
+        - paragraph [ref=e254]: The structured 90-day learning path that complements the hands-on practice pages below.
+      - region "Course curriculum" [ref=e255]:
+        - article [ref=e256]:
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: "00"
+              - generic [ref=e260]: Course
+            - heading "Playwright JavaScript Course — 90 Day Journey" [level=3] [ref=e261]
+            - paragraph [ref=e262]: The full 8-module curriculum covering Playwright fundamentals, advanced locators, network interception, the test runner, page-object models, CI/CD, and debugging.
+            - generic [ref=e263]:
+              - generic [ref=e264]: 8 modules
+              - generic [ref=e265]: 90 days
+              - generic [ref=e266]: Curriculum
+          - generic [ref=e267]:
+            - generic [ref=e268]: Learning path
+            - link "Open course" [ref=e269] [cursor=pointer]:
+              - /url: /playwright-course.html
+              - text: Open course
+              - img [ref=e270]
+      - generic [ref=e272]:
+        - heading "Selectors & Locators" [level=2] [ref=e273]
+        - paragraph [ref=e274]: The original two — login UI and a 10-row employee directory.
+      - region "Selectors and locators" [ref=e275]:
+        - article [ref=e276]:
+          - generic [ref=e277]:
+            - generic [ref=e278]:
+              - generic [ref=e279]: "01"
+              - generic [ref=e280]: Ready
+            - heading "Multiple Element Filter Login" [level=3] [ref=e281]
+            - paragraph [ref=e282]:
+              - text: Practise
+              - code [ref=e283]: allInnerTexts()
+              - text: ","
+              - code [ref=e284]: locator.all()
+              - text: ", footer link extraction, and"
+              - code [ref=e285]: "filter({ hasText })"
+              - text: on a realistic login UI.
+            - generic [ref=e286]:
+              - generic [ref=e287]: Login form
+              - generic [ref=e288]: Footer links
+              - generic [ref=e289]: Filter locator
+          - generic [ref=e290]:
+            - generic [ref=e291]: Selectors
+            - link "Open page" [ref=e292] [cursor=pointer]:
+              - /url: ./multiple_element_filter.html
+              - text: Open page
+              - img [ref=e293]
+        - article [ref=e295]:
+          - generic [ref=e296]:
+            - generic [ref=e297]:
+              - generic [ref=e298]: "02"
+              - generic [ref=e299]: Ready
+            - heading "Web Table Employee Directory" [level=3] [ref=e300]
+            - paragraph [ref=e301]:
+              - text: Practise XPath sibling selectors, CSS
+              - code [ref=e302]: :has()
+              - text: ", checkbox selection, and extracting row data from a realistic employee table."
+            - generic [ref=e303]:
+              - generic [ref=e304]: Web table
+              - generic [ref=e305]: XPath siblings
+              - generic [ref=e306]: CSS :has()
+          - generic [ref=e307]:
+            - generic [ref=e308]: Tables
+            - link "Open page" [ref=e309] [cursor=pointer]:
+              - /url: ./webtable.html
+              - text: Open page
+              - img [ref=e310]
+      - generic [ref=e312]:
+        - heading "Tables & Forms" [level=2] [ref=e313]
+        - paragraph [ref=e314]: Five practice pages — every page has visible locator markers and a collapsible Playwright solution.
+      - region "Tables and forms" [ref=e315]:
+        - article [ref=e316]:
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - generic [ref=e319]: "01"
+              - generic [ref=e320]: Ready
+            - heading "QA Profile Form" [level=3] [ref=e321]
+            - paragraph [ref=e322]: Text inputs, radios, dropdown, date, checkboxes, tabs, upload and download — every standard input type in one page.
+            - generic [ref=e323]:
+              - generic [ref=e324]: Inputs
+              - generic [ref=e325]: Tabs
+              - generic [ref=e326]: Files
+          - generic [ref=e327]:
+            - generic [ref=e328]: Forms
+            - link "Open page" [ref=e329] [cursor=pointer]:
+              - /url: ./tables/practice.html
+              - text: Open page
+              - img [ref=e330]
+        - article [ref=e332]:
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - generic [ref=e335]: "04"
+              - generic [ref=e336]: Ready
+            - heading "Companies Table" [level=3] [ref=e337]
+            - paragraph [ref=e338]:
+              - text: A minimal three-column table — Company / Contact / Country — with row-level
+              - code [ref=e339]: data-testid
+              - text: s for clean locator practice.
+            - generic [ref=e340]:
+              - generic [ref=e341]: 3 cols
+              - generic [ref=e342]: 6 rows
+              - generic [ref=e343]: Static
+          - generic [ref=e344]:
+            - generic [ref=e345]: Tables
+            - link "Open page" [ref=e346] [cursor=pointer]:
+              - /url: ./tables/webtable.html
+              - text: Open page
+              - img [ref=e347]
+        - article [ref=e349]:
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - generic [ref=e352]: "05"
+              - generic [ref=e353]: Ready
+            - heading "Tall Buildings Table" [level=3] [ref=e354]
+            - paragraph [ref=e355]:
+              - text: A six-column wide table for
+              - code [ref=e356]: nth-child
+              - text: reads, multi-cell row extraction, and sibling-text queries.
+            - generic [ref=e357]:
+              - generic [ref=e358]: 6 cols
+              - generic [ref=e359]: nth-child
+              - generic [ref=e360]: Wide grid
+          - generic [ref=e361]:
+            - generic [ref=e362]: Tables
+            - link "Open page" [ref=e363] [cursor=pointer]:
+              - /url: ./tables/webtable1.html
+              - text: Open page
+              - img [ref=e364]
+        - article [ref=e366]:
+          - generic [ref=e367]:
+            - generic [ref=e368]:
+              - generic [ref=e369]: "06"
+              - generic [ref=e370]: Ready
+            - heading "Custom Dropdowns" [level=3] [ref=e371]
+            - paragraph [ref=e372]:
+              - text: Three custom dropdowns built without native
+              - code [ref=e373]: <select>
+              - text: . Click-to-open, click-an-option pattern with
+              - code [ref=e374]: .select-trigger
+              - text: markers.
+            - generic [ref=e375]:
+              - generic [ref=e376]: .select-trigger
+              - generic [ref=e377]: 3 dropdowns
+              - generic [ref=e378]: Helper fn
+          - generic [ref=e379]:
+            - generic [ref=e380]: Forms
+            - link "Open page" [ref=e381] [cursor=pointer]:
+              - /url: ./tables/dropdowns.html
+              - text: Open page
+              - img [ref=e382]
+        - article [ref=e384]:
+          - generic [ref=e385]:
+            - generic [ref=e386]:
+              - generic [ref=e387]: "07"
+              - generic [ref=e388]: Ready
+            - heading "Select Box Variants" [level=3] [ref=e389]
+            - paragraph [ref=e390]:
+              - text: Five combobox variants — single, multi, creatable, grouped, async — using familiar
+              - code [ref=e391]: tta-rs__
+              - text: class names.
+            - generic [ref=e392]:
+              - generic [ref=e393]: Combobox
+              - generic [ref=e394]: Multi
+              - generic [ref=e395]: Async
+          - generic [ref=e396]:
+            - generic [ref=e397]: Forms
+            - link "Open page" [ref=e398] [cursor=pointer]:
+              - /url: ./tables/select-boxes.html
+              - text: Open page
+              - img [ref=e399]
+        - article [ref=e401]:
+          - generic [ref=e402]:
+            - generic [ref=e403]:
+              - generic [ref=e404]: "14"
+              - generic [ref=e405]: Ready
+            - heading "Sortable Admin Table" [level=3] [ref=e406]
+            - paragraph [ref=e407]:
+              - text: 24 employees, sortable columns with
+              - code [ref=e408]: aria-sort
+              - text: ", search/role/status filters, pagination, and a bulk-select bar."
+            - generic [ref=e409]:
+              - generic [ref=e410]: Sort
+              - generic [ref=e411]: Filter
+              - generic [ref=e412]: Paged · 24
+          - generic [ref=e413]:
+            - generic [ref=e414]: Tables
+            - link "Open page" [ref=e415] [cursor=pointer]:
+              - /url: ./tables/sortable.html
+              - text: Open page
+              - img [ref=e416]
+        - article [ref=e418]:
+          - generic [ref=e419]:
+            - generic [ref=e420]:
+              - generic [ref=e421]: "22"
+              - generic [ref=e422]: Ready
+            - heading "Cricket Scorecard" [level=3] [ref=e423]
+            - paragraph [ref=e424]:
+              - text: Two-innings batting card. Pull every score with
+              - code [ref=e425]: tbody td:nth-child(3)
+              - text: ", drop Extras + Total, find the highest run-getter."
+            - generic [ref=e426]:
+              - generic [ref=e427]: Two innings
+              - generic [ref=e428]: Highest score
+              - generic [ref=e429]: parseInt + sort
+          - generic [ref=e430]:
+            - generic [ref=e431]: Tables
+            - link "Open page" [ref=e432] [cursor=pointer]:
+              - /url: ./tables/scorecard.html
+              - text: Open page
+              - img [ref=e433]
+      - generic [ref=e435]:
+        - heading "Frame handling" [level=2] [ref=e436]
+        - paragraph [ref=e437]:
+          - text: An iframe form and a multi-frame frameset — practise
+          - code [ref=e438]: frameLocator()
+          - text: and
+          - code [ref=e439]: page.frames()
+          - text: .
+      - region "Frame handling" [ref=e440]:
+        - article [ref=e441]:
+          - generic [ref=e442]:
+            - generic [ref=e443]:
+              - generic [ref=e444]: "08"
+              - generic [ref=e445]: Ready
+            - heading "Frame Handling Overview" [level=3] [ref=e446]
+            - paragraph [ref=e447]:
+              - text: An
+              - code [ref=e448]: iframe
+              - text: hosting a vehicle registration form for
+              - code [ref=e449]: frameLocator(...)
+              - text: ", plus a link to the multi-frame frameset."
+            - generic [ref=e450]:
+              - generic [ref=e451]: iframe
+              - generic [ref=e452]: frameLocator
+              - generic [ref=e453]: Form fill
+          - generic [ref=e454]:
+            - generic [ref=e455]: Frames
+            - link "Open page" [ref=e456] [cursor=pointer]:
+              - /url: ./frames/index.html
+              - text: Open page
+              - img [ref=e457]
+        - article [ref=e459]:
+          - generic [ref=e460]:
+            - generic [ref=e461]:
+              - generic [ref=e462]: "09"
+              - generic [ref=e463]: Ready
+            - heading "Multi-frame Frameset" [level=3] [ref=e464]
+            - paragraph [ref=e465]:
+              - text: A classic
+              - code [ref=e466]: <frameset>
+              - text: with three named frames (
+              - code [ref=e467]: main
+              - text: ","
+              - code [ref=e468]: side
+              - text: ","
+              - code [ref=e469]: footer
+              - text: ) for counting and iteration.
+            - generic [ref=e470]:
+              - generic [ref=e471]: frameset
+              - generic [ref=e472]: page.frames
+              - generic [ref=e473]: Iteration
+          - generic [ref=e474]:
+            - generic [ref=e475]: Frames
+            - link "Open page" [ref=e476] [cursor=pointer]:
+              - /url: ./frames/multi-frames.html
+              - text: Open page
+              - img [ref=e477]
+        - article [ref=e479]:
+          - generic [ref=e480]:
+            - generic [ref=e481]:
+              - generic [ref=e482]: "10"
+              - generic [ref=e483]: Ready
+            - heading "Nested iframes" [level=3] [ref=e484]
+            - paragraph [ref=e485]:
+              - text: Three iframes nested three levels deep —
+              - code [ref=e486]: "#pact1"
+              - text: ">"
+              - code [ref=e487]: "#pact2"
+              - text: ">"
+              - code [ref=e488]: "#pact3"
+              - text: . Practise chained
+              - code [ref=e489]: frameLocator()
+              - text: with inputs at every depth.
+            - generic [ref=e490]:
+              - generic [ref=e491]: 3 levels
+              - generic [ref=e492]: Chained
+              - generic [ref=e493]: "#inp_val · #jex · #glaf"
+          - generic [ref=e494]:
+            - generic [ref=e495]: Frames
+            - link "Open page" [ref=e496] [cursor=pointer]:
+              - /url: ./frames/nested-iframes.html
+              - text: Open page
+              - img [ref=e497]
+        - article [ref=e499]:
+          - generic [ref=e500]:
+            - generic [ref=e501]:
+              - generic [ref=e502]: "21"
+              - generic [ref=e503]: Ready
+            - heading "Courses Frameset" [level=3] [ref=e504]
+            - paragraph [ref=e505]:
+              - text: Classic 8-frame nested
+              - code [ref=e506]: <frameset>
+              - text: with names
+              - code [ref=e507]: main
+              - text: ","
+              - code [ref=e508]: navbar
+              - text: ","
+              - code [ref=e509]: content
+              - text: ","
+              - code [ref=e510]: bot
+              - text: + 4 voids. Read
+              - code [ref=e511]: frame[name='main'] h2
+              - text: ", count via"
+              - code [ref=e512]: page.locator('//frame').all()
+              - text: ", and click navbar links retargeting"
+              - code [ref=e513]: name='content'
+              - text: .
+            - generic [ref=e514]:
+              - generic [ref=e515]: 8 frames
+              - generic [ref=e516]: Nested frameset
+              - generic [ref=e517]: target=content
+          - generic [ref=e518]:
+            - generic [ref=e519]: Frames
+            - link "Open page" [ref=e520] [cursor=pointer]:
+              - /url: ./frames/courses-frameset.html
+              - text: Open page
+              - img [ref=e521]
+      - generic [ref=e523]:
+        - heading "Widgets" [level=2] [ref=e524]
+        - paragraph [ref=e525]: Inline SVG, web components with shadow roots, and a MakeMyTrip-style date range picker — three new locator-practice surfaces.
+      - region "Widget practice" [ref=e526]:
+        - article [ref=e527]:
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - generic [ref=e530]: "11"
+              - generic [ref=e531]: Ready
+            - heading "SVG locators" [level=3] [ref=e532]
+            - paragraph [ref=e533]:
+              - text: A shape gallery, an interactive bar chart, and a star rating control. Practise SVG selectors,
+              - code [ref=e534]: getByRole
+              - text: with accessible names, and
+              - code [ref=e535]: data-testid
+              - text: on SVG nodes.
+            - generic [ref=e536]:
+              - generic [ref=e537]: SVG
+              - generic [ref=e538]: Bar chart
+              - generic [ref=e539]: Stars
+          - generic [ref=e540]:
+            - generic [ref=e541]: Widgets
+            - link "Open page" [ref=e542] [cursor=pointer]:
+              - /url: ./widgets/svg.html
+              - text: Open page
+              - img [ref=e543]
+        - article [ref=e545]:
+          - generic [ref=e546]:
+            - generic [ref=e547]:
+              - generic [ref=e548]: "12"
+              - generic [ref=e549]: Ready
+            - heading "Shadow DOM" [level=3] [ref=e550]
+            - paragraph [ref=e551]:
+              - text: Three custom elements (
+              - code [ref=e552]: tta-input-card
+              - text: ","
+              - code [ref=e553]: tta-counter
+              - text: ","
+              - code [ref=e554]: tta-nested
+              - text: ) with open shadow roots. Modern Playwright pierces shadow boundaries automatically.
+            - generic [ref=e555]:
+              - generic [ref=e556]: Web components
+              - generic [ref=e557]: Auto-pierce
+              - generic [ref=e558]: Nested shadow
+          - generic [ref=e559]:
+            - generic [ref=e560]: Widgets
+            - link "Open page" [ref=e561] [cursor=pointer]:
+              - /url: ./widgets/shadow-dom.html
+              - text: Open page
+              - img [ref=e562]
+        - article [ref=e564]:
+          - generic [ref=e565]:
+            - generic [ref=e566]:
+              - generic [ref=e567]: "13"
+              - generic [ref=e568]: Ready
+            - heading "Calendar / date picker" [level=3] [ref=e569]
+            - paragraph [ref=e570]:
+              - text: A two-month range picker in the spirit of MakeMyTrip / SpiceJet. Each day is a
+              - code [ref=e571]: role="button"
+              - text: with
+              - code [ref=e572]: aria-label
+              - text: and
+              - code [ref=e573]: data-date="YYYY-MM-DD"
+              - text: .
+            - generic [ref=e574]:
+              - generic [ref=e575]: Range
+              - generic [ref=e576]: 2 months
+              - generic [ref=e577]: Depart → Return
+          - generic [ref=e578]:
+            - generic [ref=e579]: Widgets
+            - link "Open page" [ref=e580] [cursor=pointer]:
+              - /url: ./widgets/calendar.html
+              - text: Open page
+              - img [ref=e581]
+        - article [ref=e583]:
+          - generic [ref=e584]:
+            - generic [ref=e585]:
+              - generic [ref=e586]: "15"
+              - generic [ref=e587]: Ready
+            - heading "Drag & drop Kanban" [level=3] [ref=e588]
+            - paragraph [ref=e589]:
+              - text: 4-column board with 8 draggable cards. HTML5-native DnD so
+              - code [ref=e590]: locator.dragTo()
+              - text: works, plus a manual mouse-event recipe for stubborn libraries.
+            - generic [ref=e591]:
+              - generic [ref=e592]: Drag & drop
+              - generic [ref=e593]: dragTo()
+              - generic [ref=e594]: mouse.move
+          - generic [ref=e595]:
+            - generic [ref=e596]: Widgets
+            - link "Open page" [ref=e597] [cursor=pointer]:
+              - /url: ./widgets/dnd.html
+              - text: Open page
+              - img [ref=e598]
+        - article [ref=e600]:
+          - generic [ref=e601]:
+            - generic [ref=e602]:
+              - generic [ref=e603]: "16"
+              - generic [ref=e604]: Ready
+            - heading "Toasts & notifications" [level=3] [ref=e605]
+            - paragraph [ref=e606]:
+              - text: Trigger toasts in 4 flavours with configurable duration. Practise
+              - code [ref=e607]: "toBeVisible({ timeout })"
+              - text: and asserting they're gone.
+            - generic [ref=e608]:
+              - generic [ref=e609]: Auto-dismiss
+              - generic [ref=e610]: Stack 3
+              - generic [ref=e611]: aria-live
+          - generic [ref=e612]:
+            - generic [ref=e613]: Widgets
+            - link "Open page" [ref=e614] [cursor=pointer]:
+              - /url: ./widgets/toasts.html
+              - text: Open page
+              - img [ref=e615]
+        - article [ref=e617]:
+          - generic [ref=e618]:
+            - generic [ref=e619]:
+              - generic [ref=e620]: "17"
+              - generic [ref=e621]: Ready
+            - heading "Native dialogs" [level=3] [ref=e622]
+            - paragraph [ref=e623]:
+              - text: Browser
+              - code [ref=e624]: alert
+              - text: /
+              - code [ref=e625]: confirm
+              - text: /
+              - code [ref=e626]: prompt
+              - text: plus a custom modal that stacks. Practise
+              - code [ref=e627]: page.on('dialog', ...)
+              - text: .
+            - generic [ref=e628]:
+              - generic [ref=e629]: alert
+              - generic [ref=e630]: confirm · prompt
+              - generic [ref=e631]: Stacked modal
+          - generic [ref=e632]:
+            - generic [ref=e633]: Widgets
+            - link "Open page" [ref=e634] [cursor=pointer]:
+              - /url: ./widgets/dialogs.html
+              - text: Open page
+              - img [ref=e635]
+        - article [ref=e637]:
+          - generic [ref=e638]:
+            - generic [ref=e639]:
+              - generic [ref=e640]: "23"
+              - generic [ref=e641]: Ready
+            - heading "Hover menus" [level=3] [ref=e642]
+            - paragraph [ref=e643]:
+              - text: Travel-style nav. Hover
+              - emphasis [ref=e644]: Add-ons
+              - text: to reveal Taxi/Hotel/Insurance/Meal/Wifi/Activities. Practise
+              - code [ref=e645]: locator.hover()
+              - text: + nested hover.
+            - generic [ref=e646]:
+              - generic [ref=e647]: 2-level hover
+              - generic [ref=e648]: test-id-Taxi
+              - generic [ref=e649]: No click open
+          - generic [ref=e650]:
+            - generic [ref=e651]: Widgets
+            - link "Open page" [ref=e652] [cursor=pointer]:
+              - /url: ./widgets/hover-menu.html
+              - text: Open page
+              - img [ref=e653]
+        - article [ref=e655]:
+          - generic [ref=e656]:
+            - generic [ref=e657]:
+              - generic [ref=e658]: "24"
+              - generic [ref=e659]: Ready
+            - heading "Right-click menu" [level=3] [ref=e660]
+            - paragraph [ref=e661]:
+              - text: Right-click target spawns
+              - code [ref=e662]: ul.context-menu-list
+              - text: . Read items via
+              - code [ref=e663]: allInnerTexts()
+              - text: ", click any item by text. Practise"
+              - code [ref=e664]: "click({ button: 'right' })"
+              - text: .
+            - generic [ref=e665]:
+              - generic [ref=e666]: context-menu-one
+              - generic [ref=e667]: 6 items
+              - generic [ref=e668]: Disabled state
+          - generic [ref=e669]:
+            - generic [ref=e670]: Widgets
+            - link "Open page" [ref=e671] [cursor=pointer]:
+              - /url: ./widgets/context-menu.html
+              - text: Open page
+              - img [ref=e672]
+        - article [ref=e674]:
+          - generic [ref=e675]:
+            - generic [ref=e676]:
+              - generic [ref=e677]: "25"
+              - generic [ref=e678]: Ready
+            - heading "Keyboard navigation" [level=3] [ref=e679]
+            - paragraph [ref=e680]:
+              - text: Sign-up form driven entirely by
+              - code [ref=e681]: page.keyboard
+              - text: . Practise
+              - code [ref=e682]: pressSequentially
+              - text: ", Tab order, Space to toggle, Enter to submit."
+            - generic [ref=e683]:
+              - generic [ref=e684]: Tab order
+              - generic [ref=e685]: pressSequentially
+              - generic [ref=e686]: Focus trace
+          - generic [ref=e687]:
+            - generic [ref=e688]: Widgets
+            - link "Open page" [ref=e689] [cursor=pointer]:
+              - /url: ./widgets/keyboard-form.html
+              - text: Open page
+              - img [ref=e690]
+      - generic [ref=e692]:
+        - heading "Network" [level=2] [ref=e693]
+        - paragraph [ref=e694]:
+          - text: Mock APIs from your tests with
+          - code [ref=e695]: page.route()
+          - text: . Stub success, force errors, slow things down, modify payloads.
+      - region "Network practice" [ref=e696]:
+        - article [ref=e697]:
+          - generic [ref=e698]:
+            - generic [ref=e699]:
+              - generic [ref=e700]: "18"
+              - generic [ref=e701]: Ready
+            - heading "Network interception" [level=3] [ref=e702]
+            - paragraph [ref=e703]:
+              - text: A small product catalog backed by
+              - code [ref=e704]: /api/products
+              - text: . The endpoint doesn't exist — install
+              - code [ref=e705]: page.route()
+              - text: mocks to drive the UI.
+            - generic [ref=e706]:
+              - generic [ref=e707]: page.route
+              - generic [ref=e708]: fulfill / abort
+              - generic [ref=e709]: waitForResponse
+          - generic [ref=e710]:
+            - generic [ref=e711]: Network
+            - link "Open page" [ref=e712] [cursor=pointer]:
+              - /url: ./network/intercept.html
+              - text: Open page
+              - img [ref=e713]
+      - generic [ref=e715]:
+        - heading "Coming next" [level=2] [ref=e716]
+        - paragraph [ref=e717]: Placeholders for upcoming practice pages — kept visible so the learning path stays obvious.
+      - region "Upcoming practice pages" [ref=e718]:
+        - article [ref=e719]:
+          - generic [ref=e720]:
+            - generic [ref=e721]:
+              - generic [ref=e722]: "19"
+              - generic [ref=e723]: Planned
+            - heading "Windows & Tabs" [level=3] [ref=e724]
+            - paragraph [ref=e725]: Practise popup handling, context pages, tab switching, and validating new browser windows.
+          - generic [ref=e726]:
+            - generic [ref=e727]: Multi-window
+            - generic [ref=e728]: Soon
+        - article [ref=e729]:
+          - generic [ref=e730]:
+            - generic [ref=e731]:
+              - generic [ref=e732]: "20"
+              - generic [ref=e733]: Planned
+            - heading "Upload & Download" [level=3] [ref=e734]
+            - paragraph [ref=e735]: Practise file chooser flows, download assertions, and validating generated artefacts end-to-end.
+          - generic [ref=e736]:
+            - generic [ref=e737]: Files
+            - generic [ref=e738]: Soon
+      - paragraph [ref=e739]:
+        - text: "Local review paths:"
+        - code [ref=e740]: /playwright/index.html
+        - text: ","
+        - code [ref=e741]: /playwright/multiple_element_filter.html
+        - text: ","
+        - code [ref=e742]: /playwright/webtable.html
+        - text: ","
+        - code [ref=e743]: /playwright/tables/*.html
+        - text: ","
+        - code [ref=e744]: /playwright/frames/*.html
+        - text: ","
+        - code [ref=e745]: /playwright/widgets/*.html
+        - text: ","
+        - code [ref=e746]: /playwright/network/*.html
+        - text: . Nothing in this batch is committed or deployed until you ask for the upload.
+```
+
+# Test source
+
+```ts
+  1 | //7 may 2026 dropdown selection from practice page assignment
+  2 | import { test, expect } from "@playwright/test"; // 1. Corrected package name
+  3 | 
+  4 | test("Select options from Drop Down Box", async ({ page }) => {
+  5 |   await page.goto("https://app.thetestingacademy.com/playwright"); 
+  6 |   await page.getByRole('link',{name:'Custom Dropdowns'});
+> 7 |    expect (page.getByTitle).toContain("Custom dropdown practice");
+    |                             ^ TypeError: c is not iterable
+  8 | });
+```
