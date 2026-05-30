@@ -1,0 +1,21 @@
+//21 MAy
+import {test,expect} from '@playwright/test';
+import { faker } from '@faker-js/faker';
+test('Generate test data with Faker',async({page})=>{
+await page.goto('https://app.thetestingacademy.com/playwright/ttacart/');
+
+const testUser = {
+    name: faker.person.firstName(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    //faker.person.firstName and faker.internet.email are functions (actions).
+    //Hence () is required
+};
+
+await page.getByRole("textbox", { name: "Username" }).fill(testUser.name);
+await page.getByRole("textbox", { name: "Password" }).fill(testUser.password);
+await page.getByRole("button", { name: "Login" }).click();
+await expect(page.getByRole("alert")).toContainText('Username and password do not match any user in this service');
+await page.waitForTimeout(5000); 
+
+});
